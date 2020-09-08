@@ -1,0 +1,1 @@
+alter table users add column keycloak_id varchar(100);

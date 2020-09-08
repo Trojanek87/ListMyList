@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListMyList</title>
+</head>
+<body>
+<main>
+    <!--/*@thymesVar id="list" type="com.ListMyList.model.DTO.ListWriteModel"*/-->
+    <form action="#" method="post" th:action="@{/lists}" th:object="${list}">
+        <fieldset>
+            <legend>New List</legend>
+            <label>Opis
+                <input type="text" th:field="*{name}"/> <!--th:field="${list.name}" -->
+                <input type="number" th:field="*{creator.id}"/>
+            </label>
+        </fieldset>
+        <button type="submit">Add List</button>
+    </form>
+</main>
+</body>
+</html>
